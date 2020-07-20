@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import { graphql } from 'gatsby';
 
@@ -23,13 +22,13 @@ export const query = graphql`
   }
 }`
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>{data.title}</h1>
+      <h1>{data.title} is the title</h1>
       <p>{data.intro}</p>
       <p>Now go build something great.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
@@ -40,6 +39,5 @@ const IndexPage = () => {
     </Layout>
   )
 }
-)
 
 export default IndexPage
