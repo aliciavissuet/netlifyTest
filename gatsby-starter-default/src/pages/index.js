@@ -13,8 +13,6 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              intro
-              image
           }
         }
       }
@@ -29,11 +27,11 @@ const IndexPage = (props) => {
     <Layout>
       <SEO title="Home" />
       <h1>{data.title} is the title</h1>
-      <p>{data.intro}</p>
+      {/* <p>{data.intro}</p>
       <p>Now go build something great.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <img src={data.image} alt={data.imageAltTag} />
-      </div>
+      </div> */}
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </Layout>
