@@ -1,6 +1,6 @@
 backend: 
     name: github
-    repo: aliciavissuet/netlifyTest
+    repo: aliciavissuet/netlifyTest/gatsby-starter-default
 
 media_folder: static/assets
 public_folder: assets
