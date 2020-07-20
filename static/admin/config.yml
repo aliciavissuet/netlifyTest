@@ -1,0 +1,6 @@
+backend: 
+    name: github
+    repo: aliciavissuet/netlifyTest
+
+media_folder: static/assets
+public_folder: assets
