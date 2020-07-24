@@ -36,10 +36,10 @@ const IndexPage = (props) => {
         <h1 className="title">{data.title}</h1>
         <p className="bodyParagraph">{data.intro}</p>
         <div className="buttonsDiv">
-          <a className="buttonOutline" to={data.outlinedButtonLink}>
+          <a className="buttonOutline" href={data.outlinedButtonLink}>
             {data.outlinedButtonText}
           </a>
-          <a className="buttonSolid" to={data.outlinedButtonLink}>
+          <a className="buttonSolid" href={data.outlinedButtonLink}>
             {data.outlinedButtonText}
           </a>
         </div>

@@ -20,6 +20,7 @@
 .image {
     width: 120px;
     object-fit: contain;
+    margin: 36px;
 }
 
 .title {
@@ -48,12 +49,14 @@ a {
     font-size: 16px;
     transition: 0.2s ease-in all;
     cursor: pointer;
+    text-decoration: none;
 }
 .buttonOutline:hover {
     background-color: #0055FF;
     color: white;
 }
 .buttonSolid {
+    text-decoration: none;
     cursor: pointer;
     margin: 10px;
     font-size: 16px;
@@ -72,6 +75,7 @@ a {
 .contentDiv {
     display: flex;
     flex-direction: column;
+    max-width: 800px;
 }
 
 .buttonsDiv {
