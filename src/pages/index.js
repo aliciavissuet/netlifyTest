@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import remarkHTML from 'remark-html'
+import remark from 'remark'
 
 import SEO from "../components/seo"
 import { graphql } from 'gatsby';
@@ -13,17 +14,22 @@ export const query = graphql`
             frontmatter {
               title
               image
+              intro
               outlinedButtonText
               outlinedButtonLink
               solidButtonText
               solidButtonLink
           } 
-          html
         }
       }
     }
   }
 }`
+
+const toHTML = value => remark()
+  .use(remarkHTML)
+  .processSync(value)
+  .toString()
 
 const IndexPage = (props) => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -36,7 +42,7 @@ const IndexPage = (props) => {
         <h1 className="title">{data.title}</h1>
 
         <div className="bodyParagraph"
-          dangerouslySetInnerHTML={{ __html: html }}
+          dangerouslySetInnerHTML={{ __html: toHTML(data.intro) }}
         />
         <div className="buttonsDiv">
           <a className="buttonOutline" href={data.outlinedButtonLink}>
