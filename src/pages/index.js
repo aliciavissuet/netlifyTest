@@ -33,7 +33,7 @@ const toHTML = value => remark()
 
 const IndexPage = (props) => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-  const html = props.data.allFile.edges[0].node.childMarkdownRemark.html
+
   return (
     <div className={'pocContainer'}>
       <SEO title="Home" />
@@ -49,7 +49,7 @@ const IndexPage = (props) => {
             {data.outlinedButtonText}
           </a>
           <a className="buttonSolid" href={data.outlinedButtonLink}>
-            {data.outlinedButtonText}
+            {data.solidButtonText}
           </a>
         </div>
       </div>
