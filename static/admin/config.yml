@@ -13,7 +13,11 @@ collections:
         name: "home"
         file: "content/home.md"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro text, name: intro, widget: text}
           - {label: Image, name: image, widget: image}
+          - {label: Title, name: title, widget: string}
+          - {label: Intro text, name: intro, widget: markdown}
+          - {label: Outlined Button Text, name: outlinedButtonText, widget: string}
+          - {label: Outlined Button Link, name: outlinedButtonLink, widget: string}
+          - {label: Solid Button Text, name: solidButtonText, widget: string}
+          - {label: Solid Button Link, name: solidButtonLink, widget: string}
           
