@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from 'gatsby';
 import './styles.css'
@@ -14,7 +13,6 @@ export const query = graphql`
             frontmatter {
               title
               image
-              intro
               outlinedButtonText
               outlinedButtonLink
               solidButtonText
@@ -29,17 +27,17 @@ export const query = graphql`
 
 const IndexPage = (props) => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  const html = props.data.allFile.edges[0].node.childMarkdownRemark.html
   return (
     <div className={'pocContainer'}>
       <SEO title="Home" />
       <img src={data.image} alt={data.imageAltTag} className="image" />
       <div className="contentDiv d">
         <h1 className="title">{data.title}</h1>
-        <div
-          className="bodyParagraph"
+
+        <div className="bodyParagraph"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        <div className="bodyParagraph">{data.intro}</div>
         <div className="buttonsDiv">
           <a className="buttonOutline" href={data.outlinedButtonLink}>
             {data.outlinedButtonText}
