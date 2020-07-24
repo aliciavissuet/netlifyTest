@@ -13,13 +13,14 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              intro
               image
+              intro
               outlinedButtonText
               outlinedButtonLink
               solidButtonText
               solidButtonLink
-          }
+          } 
+          html
         }
       }
     }
@@ -34,7 +35,11 @@ const IndexPage = (props) => {
       <img src={data.image} alt={data.imageAltTag} className="image" />
       <div className="contentDiv d">
         <h1 className="title">{data.title}</h1>
-        <p className="bodyParagraph">{data.intro}</p>
+        <div
+          className="bodyParagraph"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        <div className="bodyParagraph">{data.intro}</div>
         <div className="buttonsDiv">
           <a className="buttonOutline" href={data.outlinedButtonLink}>
             {data.outlinedButtonText}
