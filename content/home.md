@@ -1,5 +1,6 @@
 ---
 image: assets/icon-routing.svg
+imageAltTag: routing icon
 title: Take our tech for a test drive
 intro: We’ve built our solutions to be flexible and efficient, making it easy to
   integrate with any part of our product stack for your specific business needs.

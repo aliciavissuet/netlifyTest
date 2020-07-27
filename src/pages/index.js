@@ -15,6 +15,7 @@ export const query = graphql`
             frontmatter {
               title
               image
+              imageAltTag
               intro
               outlinedButtonText
               outlinedButtonLink
@@ -61,7 +62,7 @@ const IndexPage = (props) => {
     <>
       <div className={'pocContainer'}>
         <SEO title="Home" />
-        <img src={data.image} alt={data.imageAltTag} className="image" />
+        <img src={data.image} alt={data.imageAltTag} title={data.imageAltTag} className="image" />
         <div className="contentDiv d">
           <h1 className="title">{data.title}</h1>
 
