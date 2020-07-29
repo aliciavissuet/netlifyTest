@@ -64,6 +64,7 @@ const IndexPage = (props) => {
         <SEO title="Home" />
         <img src={data.image} alt={data.imageAltTag} title={data.imageAltTag} className="image" />
         <div className="contentDiv d">
+          <p className="bodyParagraph">** This is version 2</p>
           <h1 className="title">{data.title}</h1>
 
           <div className="bodyParagraph"
