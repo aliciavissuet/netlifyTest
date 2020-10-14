@@ -12,6 +12,10 @@ productValueProps:
         - content:
             header: Header
             body: Body
+    header: test
+    sections:
+      - header: test
+        body: test
   - valueProp:
       header: Header
       sections:
@@ -21,6 +25,10 @@ productValueProps:
         - content:
             header: Header
             body: Body
+    header: test
+    sections:
+      - header: test
+        body: test
 dispatch:
   title: Title
   header: Header
